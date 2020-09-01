@@ -25,4 +25,10 @@ class Show
     end
   end
 
+  def main_characters_in_show
+    @characters.find_all do |character|
+      character.salary_greater_than_500000? && character.name_with_all_uppercase_letters?
+    end
+  end
+
 end
