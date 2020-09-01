@@ -10,4 +10,10 @@ class CharacterTest < Minitest::Test
     assert_instance_of Character, kitt
   end
 
+  def test_it_has_a_name
+    kitt = Character.new({name: "KITT", actor: "William Daniels", salary: 1_000_000})
+
+    assert_equal "KITT", kitt.name
+  end
+
 end
